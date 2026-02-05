@@ -1,0 +1,13 @@
+{
+    "name": "nodejs-solace-demo",
+    "version": "1.0.0",
+    "description": "Ejemplo sobre un consumidor de mensajes de Solace en NodeJS",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "solclientjs": "^10.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MigueMat4/solace-demo"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "host": "wss://localhost:443",
+    "messagevpn": "default",
+    "username": "default",
+    "password": "default"
+}
