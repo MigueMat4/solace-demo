@@ -28,7 +28,7 @@ El flujo básico es:
          ▼
 ┌─────────────────────────┐
 │                         │
-│     Solace Platform      │
+│     Solace Platform     │
 │     Event Broker        │
 │                         │
 └────────────┬────────────┘
@@ -178,9 +178,8 @@ Host
 Message VPN
 Username
 Password
+Queue Name
 ```
-
-También debe conocer el nombre de la cola al que se suscribirá. En la línea 187 se suscribe a `Q.TEST` por default.
 
 ---
 
@@ -234,16 +233,19 @@ El archivo `requirements.txt` incluye la API de Solace para Python (`solace-pubs
 
 ## Configuración
 
-El publicador al igual que el consumidor necesita conocer los datos necesarios para conectarse al broker:
+El publicador al igual que el consumidor necesita conocer los datos necesarios para conectarse al broker. Lo hace por medio de `config.json`:
 
 ```text
 Host
 Message VPN
 Username
 Password
+Topic
 ```
 
 Además, debe conocer el destino al que publicará los mensajes.
+
+> ⚠️ No coloques contraseñas, tokens u otras credenciales reales directamente en el código si vas a compartir el proyecto públicamente.
 
 ---
 
