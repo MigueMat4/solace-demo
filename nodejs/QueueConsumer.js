@@ -183,17 +183,17 @@ solace.SolclientFactory.init(factoryProps);
 // AVISO: funciona solo con ('solclientjs').debug
 solace.SolclientFactory.setLogLevel(solace.LogLevel.WARN);
 
-// Crear el consumidor, especificando el nombre de la cola
-var consumer = new QueueConsumer(solace, 'Q.TEST');
-
 // Verificar que estén todos los datos de conexión del broker
 const config = require('./config.json');
-if (!config.host || !config.username || !config.messagevpn || !config.password) {
+if (!config.host || !config.username || !config.messagevpn || !config.password || !config.queueName) {
     consumer.log('No se puede conectar: se esperan todos los argumentos en config.json ->' +
         ' <protocol://host[:port]> <message-vpn> <client-username> <client-password>.\n' +
         'Los protocolos disponibles son ws://, wss://, http://, https://, tcp://, tcps://');
     process.exit(1);
 }
+
+// Crear el consumidor, especificando el nombre de la cola
+var consumer = new QueueConsumer(solace, config.queueName);
 
 // Iniciar hilo del consumidor
 consumer.run([

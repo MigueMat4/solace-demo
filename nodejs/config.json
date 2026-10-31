@@ -1,6 +1,7 @@
 {
-    "host": "wss://localhost:443",
+    "host": "wss://your.messaging.solace.cloud:443",
     "messagevpn": "default",
-    "username": "default",
-    "password": "default"
+    "username": "admin",
+    "password": "default",
+    "queueName": "q.test"
 }
