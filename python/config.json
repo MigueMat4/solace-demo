@@ -1,0 +1,7 @@
+{
+    "host": "tcps://your.messaging.solace.cloud:55443",
+    "messagevpn": "default",
+    "username": "admin",
+    "password": "default",
+    "topic": "solace/america/ps/training/eda"
+}
